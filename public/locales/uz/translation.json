@@ -1,0 +1,141 @@
+{
+  "navbar": {
+    "item1": "Haqida",
+    "item2": "Loyihalar",
+    "item3": "Karyera",
+    "item4": "Yangiliklar",
+    "item5": "Aloqa"
+  },
+  "header": {
+    "title": "DISCOVER INVEST",
+    "subtitle": "Hammasida mukammallik",
+    "btn1": "Loyihalar",
+    "btn2": "Aloqa"
+  },
+  "about": {
+    "top": "Haqida",
+    "title": "DISCOVER INVEST haqida",
+    "desc": "Biz faqat loyihalar yaratmaymiz, biz yangi imkoniyatlar yaratamiz. Davlat miqyosidagi ob'ektlarni qurib, biz kelajakni qurmoqdamiz. Biz atrof-muhit haqida qayg'uramiz: kompaniya binolar va infratuzilmani qurish va foydalanish bilan bog'liq ekologik jihatlar uchun to'liq javobgarlikni o'z zimmasiga oladi.",
+    "employees": "Xodimlar soni",
+    "projects": "loyihalar",
+    "complexes": "Yashash majmualari",
+    "marketplace": "Bozorda 14 yil",
+    "techniques": "Maxsus texnikalar",
+    "hospitals": "Kasxonalar"
+  },
+  "aboutPage": {
+    "title": "KOMPANIYA HAQIDA",
+    "subtitle": "Biz faqat loyihalar yaratmaymiz, biz yangi imkoniyatlar yaratamiz. Davlat miqyosidagi ob'ektlarni qurib, biz kelajakni qurmoqdamiz. Biz atrof-muhit haqida qayg'uramiz:",
+    "btn": "Taqdimotni yuklab olish",
+    "title1": "Kompaniya haqida",
+    "desc1": "Biz faqat loyihalar yaratmaymiz, biz yangi imkoniyatlar yaratamiz. Davlat miqyosidagi ob'ektlarni qurib, biz kelajakni qurmoqdamiz. Biz atrof-muhit haqida qayg'uramiz: kompaniya binolar va infratuzilmani qurish va foydalanish bilan bog'liq ekologik jihatlar uchun to'liq javobgarlikni o'z zimmasiga oladi.",
+    "btn1": "Loyihalar",
+    "title2": "Bizning missiyamiz",
+    "desc2": "Bizning missiyamiz O'zbekistonda qurilishda eng ilg'or texnologiyalarni joriy etish va zamonaviy dizayn yechimlarini yaratish. Birinchi darajali xodimlarga tayanib, uzoq yillar davomida arzon uy-joy va sanoat binolarini quramiz.",
+    "title3": "Bizning maqsadimiz",
+    "desc3": "Markaziy Osiyoda eng yaxshi loyiha kompaniyasini yaratish, bu imkoniyat beradi: - Jamiyat - mehnatda yuqori standartlarni o'rnatish orqali odamlarning turmush darajasini yaxshilash. - Mijozlar - qo'shma faoliyatdan zavqlanish, uzoq muddatli va ochiq munosabatlarni qurish. - Xodimlar - doimiy o'sish,",
+    "title4": "Bizning qadriyatlarimiz",
+    "desc4": "Bizning qadriyatlarimiz (LLC) 'Discover Invest' 2008 yilda tashkil topganidan beri biz faqat professional bilan ishlaymiz. Bizning mutaxassislarimiz ilg'or texnologiyalar va innovatsion yondashuvni qo'llaydilar.Qachon va qayerda bo'lishidan qat'i nazar, biz o'z qadriyatlarimizga sodiq qolamiz: xodimlar va xavfsizlik, doimiy yaxshilanish va mijozlarimiz ishonchi."
+  },
+  "advantages": {
+    "title": "Bizning afzalliklarimiz",
+    "title1": "Bizning jamoamiz",
+    "title2": "Mijozlarga ijobiy yondashuv",
+    "title3": "Barcha ishlar kafolatlanadi",
+    "desc1": "Kompaniya tajribali xodimlarni tanlov asosida yollaydi",
+    "desc2": "Veb-saytimiz orqali qilgan katta ishlarimizni ko'rib, mijozlarimizning ishonchini qozonganimizga ishonchingiz komil bo'ladi",
+    "desc3": "Biz o'z missiyamizni ehtiyotkorlik bilan bajaramiz va kompaniyamizga ishonchingizni qadrlaymiz Barcha xatolar aniq tuzatildi"
+  },
+  "projects": {
+    "title": "Bizning loyihalar",
+    "title1": "Sehrli shahar",
+    "desc1": "Bu keng ko'lamli ijtimoiy ahamiyatga ega loyiha. Toshkentdagi madaniyat va ko'ngilochar klaster yangi diqqatga sazovor joylardan biridir.",
+    "title2": "Gardens Residence",
+    "desc2": "O'zbekiston aholisi uchun qulaylik yaratish uchun yaratilgan ko'p funktsional turar joy majmuasi.",
+    "title3": "Fonon",
+    "desc3": "Poytaxtning yuragida ulkan yashash joyi.",
+    "title4": "Invento",
+    "desc4": "Fonon - 2020 yilda Italiya asosida qurilgan O'zbekistondagi zargarlik ishlab chiqarish zavodi. Fonon - Evropalik va Sharqiy uslublarda qimmatbaho metallarni ishlab chiqaradigan Markaziy Osiyodagi yagona yirik korxona.",
+    "title5": "Prezident maktabi",
+    "desc5": "Toshkent City xalqaro biznes markazida joylashgan xalqaro bolalar bog'chasi va maktab.",
+    "title6": "Bulvar",
+    "desc6": "Bu xalqaro darajada bilim beradigan o'quv yurtidir",
+    "btn": "Barcha loyihalar"
+  },
+  "projectsPage": {
+    "title": "Loyihalar",
+    "subtitle": "Biz faqat loyihalar yaratmaymiz, biz yangi imkoniyatlar yaratamiz. Davlat miqyosidagi ob'ektlarni qurib, biz kelajakni qurmoqdamiz. Biz atrof-muhit haqida qayg'uramiz:"
+  },
+  "news": {
+    "title": "Kompaniya yangiliklari",
+    "date1": "2023-01-27",
+    "date2": "2022-10-02",
+    "date3": "2022-12-19",
+    "date4": "2023-01-27",
+    "subtitle1": "Discover Invest barchani Yangi Yil 2023 bilan tabriklaydi!",
+    "subtitle2": "O'ZBEKISTON RESPUBLIKASI KONSTITUTSIYASI QABUL QILINGAN KUN",
+    "subtitle3": "Sizni Discover Investning keng turdagi qurilish ob'ektlari bilan tanishtirishda davom etamiz.",
+    "subtitle4": "Qurilish loyihasi menejeri kim?",
+    "btn": "Barcha yangiliklar",
+    "viewMore": "Batafsil ko'rish",
+    "desc1": "Discover Invest bir nechta qurilish loyihasi menejerlariga ega. Bu ko'chmas mulk binosini muvaffaqiyatli sotish uchun mas'ul mutaxassis. Butun jarayonni boshqaradi, loyihalashtirish va loyiha hujjatlarini tasdiqlash bosqichidan tortib, binoni foydalanishga topshirish va loyiha yakunidan keyingi qo'llab-quvvatlashni amalga oshiradi.",
+    "desc2": "Keyingi yilning har bir kuni yangi istiqbollarni ochishini va doimo ishonchli sheriklar yoningizda bo'lishini tilaymiz. Sog'liq, baxt va barcha ezgu ishlaringizda omad tilaymiz!",
+    "desc3": "Discover Invest qurilish kompaniyasi O'zbekiston Respublikasi Konstitutsiyasi kuni bilan sizni chuqur hurmat va tabriklaydi! Sizni chin dildan tabriklaymiz va har biringizga farovonlik, muvaffaqiyat, baxtli va tinch kelajak tilaymiz!",
+    "desc4": "Sizni Discover Investning keng turdagi qurilish ob'ektlari bilan tanishtirishda davom etamiz. Ular orasida Toshkentning Yangihayot shahrida qurilayotgan Yangi Choshtepa turar joy majmuasi ham bor. Qishloqning umumiy maydoni 12 gektar. Hozirgacha kompaniya tomonidan 29 ta uy qurib topshirildi."
+  },
+  "newsPage": {
+    "title": "Yangiliklar",
+    "subtitle": "Biz faqat loyihalar yaratmaymiz, biz yangi imkoniyatlar yaratamiz. Davlat miqyosidagi ob'ektlarni qurib, biz kelajakni qurmoqdamiz. Biz atrof-muhit haqida qayg'uramiz:"
+  },
+  "contacts": {
+    "title": "Aloqa",
+    "title1": "Manzil",
+    "title2": "Telefon",
+    "title3": "Ish vaqti",
+    "desc1": "O'zbekiston, Toshkent, Alisher Navoiy nomidagi O'zbekiston milliy bog'i",
+    "desc2": "+998 71 288 88 88",
+    "desc3": "09:00 - 18:00 Du-Shan",
+    "num": "Telefon raqami",
+    "name": "Ism",
+    "name2": "Ismingiz nima?",
+    "feedback": "Fikr-mulohaza",
+    "notification": "Xabar muvaffaqiyatli yuborildi!"
+  },
+  "contactsPage": {
+    "title": "ALOQA",
+    "subtitle": "Joriy shaklni to'ldirib, kontaktlaringizni qoldiring va biz siz bilan imkon qadar tezroq bog'lanamiz.",
+    "question": "Qanday yordam bera olamiz?",
+    "title1": "Manzil",
+    "title2": "Telefon",
+    "title3": "Ish vaqti",
+    "desc1": "O'zbekiston, Toshkent, Alisher Navoiy nomidagi O'zbekiston milliy bog'i",
+    "desc2": "+998 71 288 88 88",
+    "desc3": "09:00 - 18:00 Du-Shan",
+    "num": "Telefon raqami",
+    "name": "Ism",
+    "name2": "Ismingiz nima?",
+    "feedback": "Fikr-mulohaza",
+    "notification": "Xabar muvaffaqiyatli yuborildi!",
+    "notification_err": "Nimadir yuz berdi, qayta urinib ko'ring!",
+    "department": "Bo'lim",
+    "item1": "Bo'lim",
+    "item2": "Savdo bo'limi",
+    "item3": "Inson resurslari bo'limi",
+    "item4": "Moliyaviy bo'lim",
+    "item5": "Buxgalteriya",
+    "item6": "Xarid bo'limi",
+    "item7": "Ofis",
+    "ques": "Savolingiz",
+    "leave_ques": "Savolingizni qoldiring ..."
+  },
+  "team": {
+    "title": "Bizning jamoamiz",
+    "name1": "Norbekov Shavkat Bo'riboy o'g'li",
+    "name2": "Artiqbaev Saxobiddin Doniyor o'g'li",
+    "name3": "Kuziev Jakhongir Bakhodirovich",
+    "name4": "Boltaev Obidjon Uchqun o'g'li",
+    "name5": "Xusanov Akromjon Turaxon o'g'li",
+    "desc1": "Loyiha menejeri",
+    "desc2": "Qurilish maydoni rahbari"
+  }
+}
