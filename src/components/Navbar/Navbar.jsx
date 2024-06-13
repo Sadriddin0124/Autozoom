@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { HiOutlineBars3CenterLeft } from "react-icons/hi2";
 import { LuUser } from "react-icons/lu";
 import { IoIosLogOut } from "react-icons/io";
+import Auth from "../Auth/Auth";
 
 const Navbar = ({ setSideBarStatus, sideBarStatus }) => {
   const [logOut, setLogOut] = useState(false);
@@ -11,6 +12,7 @@ const Navbar = ({ setSideBarStatus, sideBarStatus }) => {
         sideBarStatus ? "nav2" : "nav"
       } p-[20px] bg-white fixed shadow-md right-0 flex justify-between`}
     >
+      <Auth/>
       <button
         className="px-[10px] py-[5px] bg-indigo-950 text-white text-[20px] rounded-md"
         onClick={() => setSideBarStatus((prev) => !prev)}

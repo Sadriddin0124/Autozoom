@@ -13,14 +13,14 @@ const App = () => {
       </div>
       <div className={sideBarStatus ? "nav2 nav min-h-[100vh]" : "nav min-h-[100vh]"}>
         <Navbar setSideBarStatus={setSideBarStatus} sideBarStatus={sideBarStatus}/>
-        <div className={` bg-slate-200 w-full h-full mt-[90px]`}>
+        <div className={`p-[20px] bg-slate-200 w-full h-full mt-[90px]`}>
           <Routes>
             <Route path="/" element={<Dashboard />} />
           </Routes>
         </div>
-        <div className={` p-[20px] bg-white flex justify-center relative`}>
+        <footer className={` p-[20px] bg-white flex justify-center relative`}>
           <p>© Copyright Autozoom.uz 2023-2024</p>
-        </div>
+        </footer>
       </div>
     </div>
   );
