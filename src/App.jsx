@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Sidebar from "./components/Sidebar/Sidebar";
 import Navbar from "./components/Navbar/Navbar";
 import { Route, Routes } from "react-router-dom";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Loader from "./components/Loader/Loader";
+import { Cities } from "./components/Cities/Cities";
 
 const App = () => {
   const [sideBarStatus, setSideBarStatus] = useState(false);
@@ -31,9 +32,10 @@ const App = () => {
         <div className={`p-[20px] bg-slate-200 w-full h-full mt-[90px]`}>
           <Routes>
             <Route path="/" element={<Dashboard />} />
+            <Route path="/cities" element={<Cities />} />
           </Routes>
         </div>
-        <footer className={` p-[20px] bg-white flex justify-center relative`}>
+        <footer className={`p-[20px] bg-white flex justify-center relative`}>
           <p>© Copyright Autozoom.uz 2023-2024</p>
         </footer>
       </div>
