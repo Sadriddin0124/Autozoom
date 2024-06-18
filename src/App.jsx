@@ -9,8 +9,8 @@ import { Models } from "./components/Models/Models";
 import { ToastContainer } from "react-toastify";
 
 const App = () => {
-  const [sideBarStatus, setSideBarStatus] = useState(false);
-  const [loading, setLoading] = useState(false);
+  const [sideBarStatus, setSideBarStatus] = useState(false)
+  const [loading, setLoading] = useState(false)
   useEffect(()=> {
     setTimeout(() => {
       setLoading(true)
