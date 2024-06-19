@@ -5,10 +5,12 @@ import { Route, Routes } from "react-router-dom";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Loader from "./components/Loader/Loader";
 import { Cities } from "./components/Cities/Cities";
+import { Models } from "./components/Models/Models";
+import { ToastContainer } from "react-toastify";
 
 const App = () => {
-  const [sideBarStatus, setSideBarStatus] = useState(false);
-  const [loading, setLoading] = useState(false);
+  const [sideBarStatus, setSideBarStatus] = useState(false)
+  const [loading, setLoading] = useState(false)
   useEffect(()=> {
     setTimeout(() => {
       setLoading(true)
@@ -16,6 +18,7 @@ const App = () => {
   },[])
   return (
     <div className="w-[100%] flex justify-end bg-slate-200">
+      <ToastContainer />
       {loading ? "" : <Loader />}
       <div className="">
         <Sidebar sideBarStatus={sideBarStatus} />
@@ -33,6 +36,7 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/cities" element={<Cities />} />
+            <Route path="/models" element={<Models />} />
           </Routes>
         </div>
         <footer className={`p-[20px] bg-white flex justify-center relative`}>
