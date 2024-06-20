@@ -93,7 +93,7 @@ export const Locations = () => {
     const handleEdit = (item) => {
         setId(item.id);
         setOpen3(true);
-        setData({ name: item.name, images: item.images, text: item.text });
+        setData({ name: item.name, images: item.images, text: item.text, slug: item?.slug });
     };
     const handleOk = (id) => {
         setId(id);
@@ -156,10 +156,11 @@ export const Locations = () => {
                 toast.error("An error occurred: " + err.message);
             });
     };
+    console.log(data,"dataaa")
 
     return (
         <div className="container mx-auto mt-5 max-w-6xl">
-            <button onClick={handleOpen} className="btn bg-indigo-500 text-white hover:bg-indigo-700 px-4 py-2">
+            <button onClick={handleOpen} className="btn bg-indigo-500 text-white hover:bg-indigo-700 px-4 py-2 mb-5">
                 Add Location
             </button>
             <table className="w-full border-collapse border border-slate-500">
@@ -179,7 +180,7 @@ export const Locations = () => {
                             <td className="text-lg text-black border border-slate-600 px-4 py-2">{item?.slug}</td>
                             <td className="text-lg text-black border border-slate-600 px-4 py-2">{item?.text}</td>
                             <td className="text-lg text-black border border-slate-600 px-4 py-2">
-                                <img src={`https://autoapi.dezinfeksiyatashkent.uz/api/uploads/images/${item?.image_src}`} alt="" />
+                                <img className="w-16" src={`https://autoapi.dezinfeksiyatashkent.uz/api/uploads/images/${item?.image_src}`} alt="" />
                             </td>
                             <td className="text-lg text-black border border-slate-600 px-4 py-2">
                                 <button className="btn bg-indigo-500 text-white hover:bg-indigo-700 px-4 py-2 mx-1" onClick={() => handleEdit(item)}>
