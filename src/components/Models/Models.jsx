@@ -148,11 +148,11 @@ export const Models = () => {
         toast.error("An error occurred: " + err.message);
       });
   };
-
+  console.log('ishladi :)');
   return (
     <div className="container mx-auto mt-5 max-w-6xl">
       <button onClick={handleOpen} className="btn bg-indigo-500 text-white hover:bg-indigo-700 px-4 py-2 mb-">
-        Add Model
+        Add Model 
       </button>
       <table className="w-full border-collapse border border-slate-500">
         <thead className="bg-slate-300">
