@@ -21,7 +21,7 @@ const App = () => {
     <div className="w-[100%] flex justify-end bg-slate-200">
       <ToastContainer />
       {loading ? "" : <Loader />}
-      <div className="">
+      <div>
         <Sidebar sideBarStatus={sideBarStatus} />
       </div>
       <div

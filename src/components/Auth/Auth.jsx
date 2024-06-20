@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FaRegEye } from "react-icons/fa6";
 import { FaRegEyeSlash } from "react-icons/fa6";
-import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 export const base_url = "https://autoapi.dezinfeksiyatashkent.uz/api";
 
 const Auth = ({setAuthStatus}) => {
@@ -10,8 +10,6 @@ const Auth = ({setAuthStatus}) => {
   const [password, setPassword] = useState("")
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log(number);
-    console.log(password);
     fetch(`${base_url}/auth/signin`, {
         method: "POST",
         headers: {
@@ -26,6 +24,7 @@ const Auth = ({setAuthStatus}) => {
             data?.data?.tokens?.accessToken?.token
           );
           if (data?.success === true) {
+            toast.success(data?.message)
             setAuthStatus(true)
           } 
         })
@@ -36,14 +35,14 @@ const Auth = ({setAuthStatus}) => {
   return (
     <div className="fixed left-0 top-0 w-full h-full bg-white z-[20] flex justify-center items-center">
       <div className="w-[400px] px-[30px] py-[50px] border rounded-2xl flex flex-col gap-[20px] shadow-lg">
-        <h1 className="text-[30px] font-bold">Login</h1>
+        <h1 className="text-[30px] font-bold text-black">Login</h1>
         <form onSubmit={handleSubmit} className="w-[100%] flex flex-col gap-[40px]">
           <div>
             <input
               type="text"
               placeholder="Number"
               onChange={(e)=>setNumber(e?.target?.value)}
-              className="w-[100%] px-[20px] py-[12px] border outline-none rounded-md focus:border-indigo-700"
+              className="w-[100%] px-[20px] py-[12px] border bg-white outline-none rounded-md focus:border-indigo-700"
               />
           </div>
           <div className="relative w-[100%]">
@@ -57,7 +56,7 @@ const Auth = ({setAuthStatus}) => {
               type={type ? "text" : "password"}
               placeholder="Password"
               onChange={(e)=>setPassword(e?.target?.value)}
-              className="w-[100%] px-[20px] py-[12px] border outline-none rounded-md focus:border-indigo-700"
+              className="w-[100%] px-[20px] py-[12px] border bg-white outline-none rounded-md focus:border-indigo-700"
             />
           </div>
           <button className="py-[10px] px-[20px] w-[100%] bg-indigo-900 text-white text-[20px] rounded-md">
