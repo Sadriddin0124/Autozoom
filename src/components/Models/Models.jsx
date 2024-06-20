@@ -5,10 +5,10 @@ import { MdOutlineDeleteForever } from "react-icons/md";
 import { toast } from "react-toastify";
 
 const style = {
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
   width: 400,
   p: 4,
 };
@@ -28,11 +28,10 @@ export const Models = () => {
 
   const getModels = () => {
     fetch(`https://autoapi.dezinfeksiyatashkent.uz/api/models`)
-      .then((res) => res.json())
-      .then((data) => {
+      .then(res => res.json())
+      .then(data => {
         setModels(data?.data || []);
-      })
-      .catch((err) => {
+      }).catch(err => {
         console.log(err);
         toast.error("Failed to fetch models");
       });
@@ -60,8 +59,8 @@ export const Models = () => {
       method: "POST",
       body: formData,
       headers: {
-        Authorization: `Bearer ${token}`,
-      },
+        "Authorization": `Bearer ${token}`
+      }
     })
       .then((res) => res.json())
       .then((data) => {
@@ -105,12 +104,11 @@ export const Models = () => {
     formData.append("brand_id", data.brand);
 
     fetch(`https://autoapi.dezinfeksiyatashkent.uz/api/models/${id}`, {
-      method: "PUT",
+      method: 'PUT',
       body: formData,
       headers: {
-        Authorization: `Bearer ${token}`,
+        "Authorization": `Bearer ${token}`
       },
-<<<<<<< HEAD
     }).then(response => response.json()).then(response => {
       if (response.success) {
         toast.success("Model updated successfully");
@@ -124,35 +122,16 @@ export const Models = () => {
       console.log(error);
       toast.error("An error occurred: " + error.message);
     });
-=======
-    })
-      .then((response) => response.json())
-      .then((response) => {
-        if (response.success) {
-          toast.success("Models updated successfully");
-          getModels();
-          setOpen3(false);
-          setData({ name: "", brand: "" });
-        } else {
-          toast.error("Error updating category");
-        }
-      })
-      .catch((error) => {
-        console.log(error);
-        toast.error("An error occurred: " + error.message);
-      });
->>>>>>> 0ef1cac6239a9b492e7e597047cb27a2d8de90b4
   };
 
   const deleteModels = (e) => {
     e.preventDefault();
     fetch(`https://autoapi.dezinfeksiyatashkent.uz/api/models/${id}`, {
-      method: "DELETE",
+      method: 'DELETE',
       headers: {
-        Authorization: `Bearer ${token}`,
+        "Authorization": `Bearer ${token}`
       },
     })
-<<<<<<< HEAD
       .then(response => response.json())
       .then(data => {
         if (data.success) {
@@ -160,24 +139,11 @@ export const Models = () => {
           setModels(newModels);
           setOpen2(false);
           toast.success("Model deleted successfully");
-=======
-      .then((response) => response.json())
-      .then((data) => {
-        if (data.success) {
-          const newModels = models.filter((item) => item.id !== id);
-          setModels(newModels);
-          setOpen2(false);
-          toast.success("Models deleted successfully");
->>>>>>> 0ef1cac6239a9b492e7e597047cb27a2d8de90b4
         } else {
           toast.error(data.message);
         }
       })
-<<<<<<< HEAD
       .catch(err => {
-=======
-      .catch((err) => {
->>>>>>> 0ef1cac6239a9b492e7e597047cb27a2d8de90b4
         console.log(err);
         toast.error("An error occurred: " + err.message);
       });
@@ -185,14 +151,7 @@ export const Models = () => {
 
   return (
     <div className="container mx-auto mt-5 max-w-6xl">
-<<<<<<< HEAD
-      <button onClick={handleOpen} className="btn bg-indigo-500 text-white hover:bg-indigo-700 px-4 py-2 mb-5">
-=======
-      <button
-        onClick={handleOpen}
-        className="btn mb-[20px] bg-indigo-500 text-white hover:bg-indigo-700 px-4 py-2"
-      >
->>>>>>> 0ef1cac6239a9b492e7e597047cb27a2d8de90b4
+      <button onClick={handleOpen} className="btn bg-indigo-500 text-white hover:bg-indigo-700 px-4 py-2 mb-">
         Add Model
       </button>
       <table className="w-full border-collapse border border-slate-500">
@@ -206,46 +165,23 @@ export const Models = () => {
         <tbody className="bg-slate-100">
           {models?.map((item, index) => (
             <tr key={index} className="border border-slate-500 text-center">
-<<<<<<< HEAD
               <td className="text-lg text-black border border-slate-600 px-4 py-2">{item?.name}</td>
               <td className="text-lg text-black border border-slate-600 px-4 py-2">{item?.brand_title}</td>
-=======
->>>>>>> 0ef1cac6239a9b492e7e597047cb27a2d8de90b4
               <td className="text-lg text-black border border-slate-600 px-4 py-2">
-                {item?.name}
-              </td>
-              <td className="text-lg text-black border border-slate-600 px-4 py-2">
-                {item?.brand_id}
-              </td>
-              <td className="text-lg text-black border border-slate-600 px-4 py-2">
-                <button
-                  className="btn bg-indigo-500 text-white hover:bg-indigo-700 px-4 py-2 mx-1"
-                  onClick={() => handleEdit(item)}
-                >
+                <button className="btn bg-indigo-500 text-white hover:bg-indigo-700 px-4 py-2 mx-1" onClick={() => handleEdit(item)}>
                   <FaEdit className="text-xl" />
                 </button>
-                <button
-                  className="btn bg-red-600 text-white hover:bg-red-800 px-4 py-2 mx-1"
-                  onClick={() => handleOk(item.id)}
-                >
+                <button className="btn bg-red-600 text-white hover:bg-red-800 px-4 py-2 mx-1" onClick={() => handleOk(item.id)}>
                   <MdOutlineDeleteForever className="text-xl" />
                 </button>
               </td>
+              <td></td>
             </tr>
           ))}
         </tbody>
       </table>
 
-<<<<<<< HEAD
       <Modal open={open} onClose={handleClose} aria-labelledby="modal-modal-title" aria-describedby="modal-modal-description">
-=======
-      <Modal
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
-      >
->>>>>>> 0ef1cac6239a9b492e7e597047cb27a2d8de90b4
         <Box sx={style}>
           <div className="bg-white p-6 rounded-lg shadow-lg w-96">
             <form onSubmit={modelsCreate}>
@@ -270,27 +206,15 @@ export const Models = () => {
                     <em>None</em>
                   </option>
                   {brands.map((brand) => (
-<<<<<<< HEAD
                     <option key={brand.id} value={brand.id}>{brand.title}</option>
-=======
-                    <option key={brand.id} value={brand.id}>
-                      {brand.id}
-                    </option>
->>>>>>> 0ef1cac6239a9b492e7e597047cb27a2d8de90b4
                   ))}
                 </select>
               </div>
               <div className="flex justify-end space-x-4">
-                <button
-                  type="submit"
-                  className="btn bg-indigo-500 text-white hover:bg-indigo-700 px-4 py-2"
-                >
+                <button type="submit" className="btn bg-indigo-500 text-white hover:bg-indigo-700 px-4 py-2">
                   Add
                 </button>
-                <button
-                  onClick={handleClose}
-                  className="btn bg-red-600 text-white hover:bg-red-800 px-4 py-2"
-                >
+                <button onClick={handleClose} className="btn bg-red-600 text-white hover:bg-red-800 px-4 py-2">
                   Cancel
                 </button>
               </div>
@@ -299,26 +223,15 @@ export const Models = () => {
         </Box>
       </Modal>
 
-      <Modal
-        open={open2}
-        onClose={() => setOpen2(false)}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
-      >
+      <Modal open={open2} onClose={() => setOpen2(false)} aria-labelledby="modal-modal-title" aria-describedby="modal-modal-description">
         <Box sx={style}>
           <div className="bg-white p-6 rounded-lg shadow-lg w-96">
             <p>Are you sure you want to delete this model?</p>
             <div className="flex justify-end space-x-4">
-              <button
-                onClick={() => setOpen2(false)}
-                className="btn bg-indigo-500 text-white hover:bg-indigo-700 px-4 py-2"
-              >
+              <button onClick={() => setOpen2(false)} className="btn bg-indigo-500 text-white hover:bg-indigo-700 px-4 py-2">
                 Cancel
               </button>
-              <button
-                onClick={deleteModels}
-                className="btn bg-red-600 text-white hover:bg-red-800 px-4 py-2"
-              >
+              <button onClick={deleteModels} className="btn bg-red-600 text-white hover:bg-red-800 px-4 py-2">
                 Delete
               </button>
             </div>
@@ -326,16 +239,7 @@ export const Models = () => {
         </Box>
       </Modal>
 
-<<<<<<< HEAD
       <Modal open={open3} onClose={() => setOpen3(false)} aria-labelledby="modal-modal-title" aria-describedby="modal-modal-description">
-=======
-      <Modal
-        open={open3}
-        onClose={() => setOpen3(false)}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
-      >
->>>>>>> 0ef1cac6239a9b492e7e597047cb27a2d8de90b4
         <Box sx={style}>
           <div className="bg-white p-6 rounded-lg shadow-lg w-96">
             <form onSubmit={editModels}>
@@ -352,42 +256,19 @@ export const Models = () => {
                 <label className="block text-lg mb-2">Brand</label>
                 <select
                   onChange={(e) => setData({ ...data, brand: e.target.value })}
-<<<<<<< HEAD
                   value={data.brand}
                   className="w-full p-2 border border-gray-300 rounded"
                 >
                   {brands.map((brand) => (
                     <option key={brand.id} value={brand.id}>{brand.title}</option>
-=======
-                  value={brand}
-                  className="w-full p-2 border border-gray-300 rounded"
-                >
-                  {brands.map((brand) => (
-                    <option key={brand.id} value={brand.id}>
-                      {brand.id}
-                    </option>
->>>>>>> 0ef1cac6239a9b492e7e597047cb27a2d8de90b4
                   ))}
                 </select>
               </div>
               <div className="flex justify-end space-x-4">
-<<<<<<< HEAD
                 <button type="submit" className="btn bg-indigo-500 text-white hover:bg-indigo-700 px-4 py-2">
                   Ok
                 </button>
                 <button onClick={() => setOpen3(false)} className="btn bg-red-600 text-white hover:bg-red-800 px-4 py-2">
-=======
-                <button
-                  type="submit"
-                  className="btn bg-indigo-500 text-white hover:bg-indigo-700 px-4 py-2"
-                >
-                  Ok
-                </button>
-                <button
-                  onClick={() => setOpen3(false)}
-                  className="btn bg-red-600 text-white hover:bg-red-800 px-4 py-2"
-                >
->>>>>>> 0ef1cac6239a9b492e7e597047cb27a2d8de90b4
                   Cancel
                 </button>
               </div>
