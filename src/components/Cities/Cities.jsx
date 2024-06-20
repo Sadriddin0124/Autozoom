@@ -13,8 +13,6 @@ export const Cities = () => {
   const [editId, setEditId] = useState(null);
   const addModalRef = useRef(null);
   const editModalRef = useRef(null);
-  
-
   const getFetch = async (url) => {
     const response = await fetch(url, {
       method: 'GET',
@@ -25,6 +23,7 @@ export const Cities = () => {
   useEffect(() => {
     getFetch(`${base_URL}/cities`).then((data) => {
       setDatas(data?.data);
+      console.log(data);
     });
   }, []);
 
@@ -33,7 +32,6 @@ export const Cities = () => {
       toast.error('Please fill the required fields');
       return;
     }
-    
     const formData = new FormData();
     formData.append('name', name);
     formData.append('text', text);
@@ -42,7 +40,7 @@ export const Cities = () => {
     fetch(`${base_URL}/cities`, {
       method: 'POST',
       headers: {
-        Authorization: `Bearer ${localStorage.getItem('token')}`,
+        Authorization: `Bearer ${localStorage.getItem('accessToken')}`,
       },
       body: formData,
     })
@@ -58,7 +56,6 @@ export const Cities = () => {
       })
       .catch(() => toast.error('Data is not uploaded'));
   };
-
   const handleDelete = (id) => {
     fetch(`${base_URL}/cities/${id}`, {
       method: 'DELETE',
@@ -76,7 +73,6 @@ export const Cities = () => {
       })
       .catch(() => toast.error('Data is not deleted'));
   };
-
   const handleEdit = (id) => {
     const data = datas.find((data) => data.id === id);
     setName(data?.name || '');
@@ -86,7 +82,6 @@ export const Cities = () => {
     setEditId(id);
     editModalRef.current.showModal();
   };
-
   const handleUpdate = () => {
     if(name === '' || text === '') {
       toast.error('Please fill the required fields');
@@ -132,12 +127,11 @@ export const Cities = () => {
       setPreview(URL.createObjectURL(file));
     }
   };
-
   return (
     <div className="container w-full max-w-[1200px] mx-auto mt-5">
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between mb-[20px]">
         <button
-          className="btn bg-indigo-950 text-white hover:text-slate-950"
+          className="btn bg-indigo-950 text-white"
           onClick={() => addModalRef.current.showModal()}
         >
           Add
@@ -153,15 +147,14 @@ export const Cities = () => {
             <th>Actions</th>
           </tr>
         </thead>
-
         <tbody className="bg-slate-100">
           {datas.map((data, index) => (
             <tr key={index} className="border-2 text-center">
-              <td className="text-lg text-black">{data.name}</td>
-              <td className="text-lg text-black">{data.text}</td>
+              <td className="text-lg text-black">{data?.name}</td>
+              <td className="text-lg text-black">{data?.text}</td>
               <td className="w-[100px] h-[100px]">
                 <img
-                  src={`${base_URL2}${data.image_src}`}
+                  src={`${base_URL2}${data?.image_src}`}
                   alt="Photo"
                   className="w-full h-full object-cover rounded-3xl"
                 />
@@ -173,7 +166,7 @@ export const Cities = () => {
                 >
                   Edit
                 </button>
-                <button className="btn bg-red-600 text-white hover:text-slate-950" onClick={() => handleDelete(data.id)}>
+                <button className="btn bg-red-600 text-white hover:text-slate-950" onClick={() => handleDelete(data?.id)}>
                   Delete
                 </button>
               </td>
@@ -181,7 +174,6 @@ export const Cities = () => {
           ))}
         </tbody>
       </table>
-
       <dialog ref={addModalRef} className="modal">
         <div className="modal-box space-y-5">
           <input
@@ -221,7 +213,6 @@ export const Cities = () => {
           </div>
         </div>
       </dialog>
-
       <dialog ref={editModalRef} className="modal">
         <div className="modal-box space-y-5">
           <input
