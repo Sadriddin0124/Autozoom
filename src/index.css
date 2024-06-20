@@ -16,3 +16,7 @@
 .nav2 {
   width: calc(100% - 84px);
 }
+
+input, select {
+  background: white;
+}
