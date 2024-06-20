@@ -156,8 +156,6 @@ export const Locations = () => {
                 toast.error("An error occurred: " + err.message);
             });
     };
-    console.log(data,"dataaa")
-
     return (
         <div className="container mx-auto mt-5 max-w-6xl">
             <button onClick={handleOpen} className="btn bg-indigo-500 text-white hover:bg-indigo-700 px-4 py-2 mb-5">
