@@ -1,6 +1,5 @@
 import React from 'react'
 import { AiOutlineHome } from 'react-icons/ai'
-import { IoSettingsOutline } from 'react-icons/io5'
 import { IoPricetagsOutline } from 'react-icons/io5'
 import { HiOutlineSquares2X2 } from 'react-icons/hi2'
 import { GrMapLocation } from 'react-icons/gr'
@@ -11,7 +10,6 @@ import Logo from '../../assets/logo.svg'
 const Sidebar = ({ sideBarStatus }) => {
   const links = [
     { name: 'Dashboard', path: '/', icon: <AiOutlineHome /> },
-    { name: 'Settings', path: '/settings', icon: <IoSettingsOutline /> },
     { name: 'Brands', path: '/brands', icon: <IoPricetagsOutline /> },
     { name: 'Models', path: '/models', icon: <HiOutlineSquares2X2 /> },
     { name: 'Locations', path: '/locations', icon: <GrMapLocation /> },
