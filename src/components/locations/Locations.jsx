@@ -161,7 +161,7 @@ export const Locations = () => {
             <button onClick={handleOpen} className="btn bg-indigo-500 text-white hover:bg-indigo-700 px-4 py-2 mb-5">
                 Add Location
             </button>
-            <table className="w-full border-collapse border border-slate-500">
+            <table className="w-full mt-[20px] border-collapse border border-slate-500">
                 <thead className="bg-slate-300">
                     <tr>
                         <th className="border border-slate-600 px-4 py-2">Name</th>
