@@ -1,5 +1,4 @@
 import React from 'react'
-import { AiOutlineHome } from 'react-icons/ai'
 import { IoPricetagsOutline } from 'react-icons/io5'
 import { HiOutlineSquares2X2 } from 'react-icons/hi2'
 import { GrMapLocation } from 'react-icons/gr'
@@ -9,8 +8,7 @@ import { Link, useLocation } from 'react-router-dom'
 import Logo from '../../assets/logo.svg'
 const Sidebar = ({ sideBarStatus }) => {
   const links = [
-    { name: 'Dashboard', path: '/', icon: <AiOutlineHome /> },
-    { name: 'Brands', path: '/brands', icon: <IoPricetagsOutline /> },
+    { name: 'Brands', path: '/', icon: <IoPricetagsOutline /> },
     { name: 'Models', path: '/models', icon: <HiOutlineSquares2X2 /> },
     { name: 'Locations', path: '/locations', icon: <GrMapLocation /> },
     { name: 'Cities', path: '/cities', icon: <LiaCitySolid /> },
