@@ -2,13 +2,12 @@ import { useEffect, useState } from "react";
 import Sidebar from "./components/Sidebar/Sidebar";
 import Navbar from "./components/Navbar/Navbar";
 import { Route, Routes } from "react-router-dom";
-import Dashboard from "./pages/Dashboard/Dashboard";
 import Loader from "./components/Loader/Loader";
 import { Cities } from "./components/Cities/Cities";
 import { Models } from "./components/Models/Models";
 import { ToastContainer } from "react-toastify";
-
-import Locations from "./components/Locations/Locations";
+import Brands from "./components/Brands/Brands";
+import Locations from "./components/locations/Locations2";
 
 
 const App = () => {
@@ -37,7 +36,7 @@ const App = () => {
         />
         <div className={`p-[20px] bg-slate-200 w-full h-full mt-[90px]`}>
           <Routes>
-            <Route path="/" element={<Dashboard />} />
+            <Route path="/" element={<Brands />} />
             <Route path="/cities" element={<Cities />} />
             <Route path="/models" element={<Models />} />
             <Route path="/locations" element={<Locations />} />
