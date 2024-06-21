@@ -7,7 +7,9 @@ import Loader from "./components/Loader/Loader";
 import { Cities } from "./components/Cities/Cities";
 import { Models } from "./components/Models/Models";
 import { ToastContainer } from "react-toastify";
-import { Locations } from "./components/locations/Locations";
+
+import Locations from "./components/Locations/Locations";
+
 
 const App = () => {
   const [sideBarStatus, setSideBarStatus] = useState(false)
