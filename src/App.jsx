@@ -7,7 +7,9 @@ import Loader from "./components/Loader/Loader";
 import { Cities } from "./components/Cities/Cities";
 import { Models } from "./components/Models/Models";
 import { ToastContainer } from "react-toastify";
+
 import Locations from "./components/Locations/Locations";
+
 
 const App = () => {
   const [sideBarStatus, setSideBarStatus] = useState(false)
@@ -21,7 +23,7 @@ const App = () => {
     <div className="w-[100%] flex justify-end bg-slate-200">
       <ToastContainer />
       {loading ? "" : <Loader />}
-      <div className="">
+      <div>
         <Sidebar sideBarStatus={sideBarStatus} />
       </div>
       <div
