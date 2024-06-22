@@ -147,7 +147,7 @@ const AddCar = ({ open, toggle, editItem, setCarsData }) => {
         toast.success(res?.message);
         setLoading(false);
         toggle();
-        getCars();
+        getCars(); 
       }
     } else {
       const res = await postCar(formData);
