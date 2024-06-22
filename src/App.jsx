@@ -8,8 +8,7 @@ import { Models } from "./components/Models/Models";
 import { ToastContainer } from "react-toastify";
 import Brands from "./components/Brands/Brands";
 import Locations from "./components/locations/Locations2";
-
-
+import Cars from "./components/Cars/Cars";
 const App = () => {
   const [sideBarStatus, setSideBarStatus] = useState(false)
   const [loading, setLoading] = useState(false)
@@ -40,6 +39,7 @@ const App = () => {
             <Route path="/cities" element={<Cities />} />
             <Route path="/models" element={<Models />} />
             <Route path="/locations" element={<Locations />} />
+            <Route path="/cars" element={<Cars />} />
           </Routes>
         </div>
         <footer className={`p-[20px] bg-white flex justify-center relative`}>
