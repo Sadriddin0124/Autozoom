@@ -138,9 +138,7 @@ const Locations = () => {
   return (
     <>
       <ToastContainer />
-      {loading ? (
-        <Loader />
-      ) : (
+      { (
         <>
           <div className="mt-12 w-full overflow-hidden p-2">
             <div className="h-screen bg-white shadow-lg p-2 flex flex-col gap-4">
